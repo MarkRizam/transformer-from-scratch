@@ -1,0 +1,275 @@
+{
+  "project_id": "AIR-005",
+  "title": "Transformer From Scratch",
+  "repository": "https://github.com/MarkRizam/transformer-from-scratch",
+  "status": "implemented; awaiting audit and release",
+  "experiments": 8,
+  "records": 63,
+  "configurations": 21,
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "benchmark_summary": [
+    {
+      "experiment": "EXP-001",
+      "configuration": "unmasked",
+      "metric": "max absolute output discrepancy",
+      "reference_kind": "PyTorch agreement ideal",
+      "n": 3,
+      "ours_mean": 4.810966440042345e-16,
+      "ours_sd": 1.695893682875867e-16,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-001",
+      "configuration": "causal",
+      "metric": "max absolute output discrepancy",
+      "reference_kind": "PyTorch agreement ideal",
+      "n": 3,
+      "ours_mean": 2.9605947323337506e-16,
+      "ours_sd": 1.2819751242557092e-16,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-002",
+      "configuration": "heads=1",
+      "metric": "max absolute output/weight discrepancy",
+      "reference_kind": "PyTorch agreement ideal",
+      "n": 3,
+      "ours_mean": 2.821816854255606e-16,
+      "ours_sd": 6.257841124211592e-17,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-002",
+      "configuration": "heads=2",
+      "metric": "max absolute output/weight discrepancy",
+      "reference_kind": "PyTorch agreement ideal",
+      "n": 3,
+      "ours_mean": 4.579669976578771e-16,
+      "ours_sd": 2.0158651201548846e-16,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-002",
+      "configuration": "heads=4",
+      "metric": "max absolute output/weight discrepancy",
+      "reference_kind": "PyTorch agreement ideal",
+      "n": 3,
+      "ours_mean": 4.810966440042345e-16,
+      "ours_sd": 2.5639502485114184e-16,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-003",
+      "configuration": "unmasked",
+      "metric": "max absolute output discrepancy",
+      "reference_kind": "PyTorch agreement ideal",
+      "n": 3,
+      "ours_mean": 6.476300976980079e-16,
+      "ours_sd": 1.397000003690909e-16,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-003",
+      "configuration": "causal",
+      "metric": "max absolute output discrepancy",
+      "reference_kind": "PyTorch agreement ideal",
+      "n": 3,
+      "ours_mean": 5.366077952354923e-16,
+      "ours_sd": 1.1555567610933199e-16,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-004",
+      "configuration": "unmasked",
+      "metric": "max prefix output change",
+      "reference_kind": "unchanged prefix ideal",
+      "n": 3,
+      "ours_mean": 2.2522333703220507,
+      "ours_sd": 0.8923166056315133,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-004",
+      "configuration": "causal",
+      "metric": "max prefix output change",
+      "reference_kind": "unchanged prefix ideal",
+      "n": 3,
+      "ours_mean": 0.0,
+      "ours_sd": 0.0,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-005",
+      "configuration": "padded + fully masked",
+      "metric": "max absolute output discrepancy",
+      "reference_kind": "PyTorch agreement ideal",
+      "n": 3,
+      "ours_mean": 2.590520390792032e-16,
+      "ours_sd": 1.6958936828758672e-16,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-005",
+      "configuration": "masked keys",
+      "metric": "maximum masked weight",
+      "reference_kind": "zero masked mass ideal",
+      "n": 3,
+      "ours_mean": 0.0,
+      "ours_sd": 0.0,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-006",
+      "configuration": "without positions",
+      "metric": "max permutation discrepancy",
+      "reference_kind": "permutation equivariance ideal",
+      "n": 3,
+      "ours_mean": 5.181040781584064e-16,
+      "ours_sd": 1.2819751242557095e-16,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-006",
+      "configuration": "with positions",
+      "metric": "max permutation discrepancy",
+      "reference_kind": "permutation equivariance ideal",
+      "n": 3,
+      "ours_mean": 1.1660646166480422,
+      "ours_sd": 0.47562718781119734,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-007",
+      "configuration": "scale=1",
+      "metric": "max absolute output discrepancy",
+      "reference_kind": "PyTorch agreement ideal",
+      "n": 3,
+      "ours_mean": 2.220446049250313e-16,
+      "ours_sd": 1.1102230246251565e-16,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-007",
+      "configuration": "scale=10",
+      "metric": "max absolute output discrepancy",
+      "reference_kind": "PyTorch agreement ideal",
+      "n": 3,
+      "ours_mean": 2.0354088784794535e-15,
+      "ours_sd": 1.6479739112756773e-15,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-007",
+      "configuration": "scale=100",
+      "metric": "max absolute output discrepancy",
+      "reference_kind": "PyTorch agreement ideal",
+      "n": 3,
+      "ours_mean": 0.0,
+      "ours_sd": 0.0,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-007",
+      "configuration": "scale=1000",
+      "metric": "max absolute output discrepancy",
+      "reference_kind": "PyTorch agreement ideal",
+      "n": 3,
+      "ours_mean": 0.0,
+      "ours_sd": 0.0,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-008",
+      "configuration": "T=8",
+      "metric": "attention weight elements",
+      "reference_kind": "2 \u00d7 T\u00b2 analytic count",
+      "n": 3,
+      "ours_mean": 128.0,
+      "ours_sd": 0.0,
+      "reference_mean": 128.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-008",
+      "configuration": "T=16",
+      "metric": "attention weight elements",
+      "reference_kind": "2 \u00d7 T\u00b2 analytic count",
+      "n": 3,
+      "ours_mean": 512.0,
+      "ours_sd": 0.0,
+      "reference_mean": 512.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-008",
+      "configuration": "T=32",
+      "metric": "attention weight elements",
+      "reference_kind": "2 \u00d7 T\u00b2 analytic count",
+      "n": 3,
+      "ours_mean": 2048.0,
+      "ours_sd": 0.0,
+      "reference_mean": 2048.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-008",
+      "configuration": "T=64",
+      "metric": "attention weight elements",
+      "reference_kind": "2 \u00d7 T\u00b2 analytic count",
+      "n": 3,
+      "ours_mean": 8192.0,
+      "ours_sd": 0.0,
+      "reference_mean": 8192.0,
+      "reference_sd": 0.0
+    }
+  ],
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "torch": "2.10.0+cpu",
+    "platform": "Linux"
+  },
+  "reproducibility": {
+    "runs": 2,
+    "atol": 1e-09,
+    "rtol": 0,
+    "status": "pass"
+  },
+  "verification": {
+    "local_unit_tests": 34,
+    "notebooks": 8,
+    "hosted_ci": "pending"
+  },
+  "figures": [
+    "figures/EXP-001.svg",
+    "figures/EXP-002.svg",
+    "figures/EXP-003.svg",
+    "figures/EXP-004.svg",
+    "figures/EXP-005.svg",
+    "figures/EXP-006.svg",
+    "figures/EXP-007.svg",
+    "figures/EXP-008.svg"
+  ],
+  "limitations": "Forward-only, synthetic inputs, see research/limitations.md."
+}
